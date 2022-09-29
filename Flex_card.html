@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex2 Practica</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family:  Arial, Helvetica, sans-serif;
+        }
+        section{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        .card{
+            width: 300px;
+            height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: papayawhip;
+            box-shadow: 4px 4px 10px gray;
+        }
+        .card header{
+            display: flex;
+            flex-direction: column;
+            height: 60%;
+            text-align: center;
+            font-size: 13px;
+        }
+        .header_fondo{
+            display: flex;
+            height: 55%;
+            background-image: url(img/fondo.png);
+            background-position: center;
+            background-size: cover;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .header_perfil{
+            width: 25%;
+            height: 50%;
+            background-image: url(img/perfil1.png);
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            position: absolute;
+            top: 100px;
+        }
+        .card header h5{
+            font-size: 14px;
+            margin-bottom: -7px;
+        }
+        .card main{
+            display: flex;
+            flex-wrap: wrap;
+            height: 30%;
+            width: 100%;
+        }
+        .card footer{         
+            height: 10%;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            overflow: hidden;
+        }
+        .card footer button{
+            border: none;
+            width: 100%;
+            height: 100%;
+            font-size: 15px;
+            background: rgb(76, 187, 107);
+        }
+        .card footer button:hover{
+            background: rgb(62, 149, 86);
+        }
+        .card main button{
+            text-align: center;
+            width: 50%;
+            border: none;
+            background: transparent;
+           box-shadow: 1px 1px 2px gray;
+        }
+        .card main button:hover{
+            background: rgb(255, 225, 177);
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="card">
+            <header>
+                <div class="header_fondo">
+                    <div class="header_perfil"></div>
+                </div>
+                <div>
+                <p> <h5>Powar o gato</h5>
+                    <br>
+                    O gato mais faceiro do planeta 
+                    <br>
+                    Engenheiro em Gatunes e o terror das meninas
+                </p>
+                </div>
+            </header>
+            <main>
+                <button>🚩 Gatu Land</button>
+                <button>💌 Send GatuMsg</button>
+                <button>
+                    <b>8,100</b> <br>
+                    Folowers
+                </button>
+                <button>
+                    <b>3,650</b> <br>
+                    Following
+                </button>
+            </main>
+            <footer>
+                <button>Follow</button>
+            </footer>
+        </div>
+    </section>
+</body>
+</html>
