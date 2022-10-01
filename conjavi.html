@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>prueba</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+        @media screen and (min-width:480px) and (max-width:770px){
+
+           
+}
+
+        @media screen and (min-width:770px) and (max-width:1440px){
+
+            .grid__main{
+                grid-column: 2/4;
+            }
+}
+        .grid{
+            display: grid;
+            grid-auto-flow: dense;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows:100vh 100vh 100vh 90vh auto;
+        }
+        .grid__header{
+            display: flex;
+            flex-direction: column;
+            grid-column: span 4;
+            background-image: linear-gradient(
+            0deg, rgba(0,0,0,0.4),
+            rgba(0,0,0,0.4)
+            ), url(img/header1.svg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+        .grid__about{
+            display: flex;
+            flex-direction: column;
+            grid-column: span 4;
+            text-align: center;
+            padding: .3rem;
+        }
+        .grid__card{
+            display: flex;
+            flex-direction: column;
+            grid-column: span 4;
+            background: #300350;
+        }
+        .grid__main{
+            display: flex;
+            flex-direction: column;
+            grid-column: span 4;
+            justify-content: center;
+            background: #300350;
+        }
+        .grid__footer{
+            display: flex;
+            flex-direction: column;
+            grid-column: span 4;
+            background: #e6e6ea;
+            padding: .5rem;
+            text-align: center;
+        }
+        
+        .grid__header header{
+            display: flex;
+            width: 98%;
+            margin: 0 auto;
+        }
+        .grid__header header{
+            background: #d9f1f4;
+            flex-direction: column;
+            text-align: center;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+        }
+        .grid__header header li{
+            padding: .5rem;
+            font-size: 1.2rem;
+        }
+        .grid__header header a{
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-size: 1.2rem;
+        }
+        .grid__header header .logo{
+            padding: .5rem;
+            font-size: 1.5rem;
+            color:#e93479b5 ;
+        }
+        .grid__header header .header-link:hover{
+            color: #E93479;
+        }
+        .grid__header .intro{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            align-self: center;
+            margin: auto 0;
+            font-size: 1.5rem;
+        }
+        .grid__header .intro button{
+            margin-top: 3rem;
+            color: rgb(240, 240, 240);
+            padding: .5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background-color: rgba(233, 52, 121, 0.6);
+        }
+        .grid__header .intro button:hover{
+            background-color: #E93479;
+        }
+        .grid__about .about-cont{
+            margin: auto 0;
+        }
+        .grid__about .about__title{
+            font-size: 1.8rem;
+        }
+        
+        .grid__about .about__me{
+            margin-top: 3rem;
+            font-size: 1.5rem;
+        }
+        .grid__card .productos{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-content: center;
+            height: 100%;
+        }
+        .grid__card .productos h2{
+            font-size: 2rem;
+            padding: .5rem;
+            color: #fff;
+            margin-top: 1rem;
+        }
+        .grid__card .productos .product-cards{
+            display: flex;
+            flex-direction: column;
+            width: 98%;
+            height: 100%;
+            padding: 1rem;
+        }
+        .grid__card .productos .product-card{
+            display: flex;
+            flex-direction: column;
+            height: 33.33%;
+            margin: .5rem;
+            border-radius: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid__card .productos .product-card:nth-child(1){
+            background-image:linear-gradient(
+        0deg, rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ), url(img/pro1.jpg);
+            background-size: cover;
+        }
+        .grid__card .productos .product-card:nth-child(2){
+            background-image:linear-gradient(
+        0deg, rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ), url(img/pro2.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        .grid__card .productos .product-card:nth-child(3){
+            background-image:linear-gradient(
+        0deg, rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ), url(img/pro3.jpg);
+            background-size: cover;
+        }
+        .grid__card .product-card header{
+            color: #fff;
+            font-size: 2rem;
+            font-weight: bold;
+            width: fit-content;
+            border-radius: 1rem;
+        }
+        .grid__card .product-card button{
+            background: #E93479;
+            font-size: 1.5rem;
+            padding: .5rem;
+            width: fit-content;
+            border-radius: 1rem;
+            margin-top: 1.5rem;
+        }
+        .grid__card .product-card button:hover{
+            background: #d77299;
+        }
+        .grid__main .img-cont{
+            display: flex;
+            height: 100%;
+            border-radius: 1.5rem;
+            background-image:linear-gradient(
+            0deg, rgba(0,0,0,0.5),
+            rgba(0,0,0,0.5)
+            ), url(img/waifu2.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            padding-bottom: 1.5rem;
+            justify-content: center;
+        }
+        .grid__main .li-cont{
+            height: fit-content;
+            border-radius: 2rem;
+            align-self: end;
+         }
+        .grid__main .li-cont li{
+            display: inline-block;
+            width: 100%;
+            font-size: 1.5rem;
+            text-align: center;
+            padding: .5rem;
+            font-weight: 600;
+            color: #fff;
+        }
+        .grid__footer nav{
+            display: flex;
+            flex-direction: column;
+        }
+        .grid__footer li{
+            display: block;
+            font-size: .8rem;
+            margin-bottom: .5rem;
+        }
+        .grid__footer li a{
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: black;
+        }
+        .grid__footer li div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid__footer li img{
+            width: 30px;
+            height: 30px;
+            margin-right: .2rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="grid">
+
+        <header class="grid__header grid__item">
+            <header>
+                <div class="logo"><h3>Practica</h3></div>
+                <nav>
+                    <ul>
+                    <li><a href="#" class="header-link">Sobre Nosotros</a></li>
+                    <li><a href="#" class="header-link">Nuestros Productos</a></li>
+                    <li><a href="#" class="header-link">Caracteristicas</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="intro">
+                <h2>Mi primera pagina</h2>
+                <h2> de practica</h2>
+                <button>Visitar</button>
+            </div>
+        </header>
+        <section class="grid__about grid__item">
+            <section class="about-cont">
+                <div class="about__title">
+                    <h2>Este es mi <br> 
+                        primer proyecto <br>
+                        ❤❤
+                    </h2>
+                </div>
+                <div class="about__me">
+                    <p>Lorem ipsum dolor sit amet,
+                    consectetur adipisicing elit. 
+                    Earum quis saepe voluptas neque 
+                    in architecto, atque error quos. 
+                    Fugiat assumenda officia sint ad, 
+                    minus unde! Itaque quis maiores dolorum 
+                    obcaecati.</p>
+                </div>
+            </section>
+        </section>
+        <card class="grid__card grid__item">
+            <section class="productos">
+                <h2>Nuestros Productos</h2>
+                <section class="product-cards">
+                    <div class="product-card">
+                        <header>Hombres</header>
+                        <button>Mas Informacion</button>
+                    </div>
+                    <div class="product-card">
+                        <header>Mujeres</header>
+                        <button>Mas Informacion</button>
+                    </div>
+                    <div class="product-card">
+                        <header>Mercancia</header>
+                        <button>Mas Informacion</button>
+                    </div>
+                </section>
+            </section>
+        </card>
+
+        <main class="grid__main grid__item">
+            <div class="img-cont">
+                <div class="li-cont">
+                    <ul>
+                        <li>100% Online</li>
+                        <li>Disponible 24h</li>
+                        <li>Atencion personalizada</li>
+                        <li>Envios a nivel nacional</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="grid__footer grid__item">
+            <nav>
+                <ul>
+                    <li>
+
+                        <div>
+                            <img src="img/fb.png" alt="">
+                        <a href="https://www.facebook.com/aldon.mendoza.359/">Aldon Mendoza</a>
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <div>
+                            <img src="img/ig.png" alt="">
+                        <a href="https://www.instagram.com">@aldonescorcia</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <p>aldonmendoza@gmail.com</p>
+        </footer>
+
+    </section>
+</body>
+</html>
