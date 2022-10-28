@@ -1,0 +1,217 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 100vh auto 20vh;
+}
+#header{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    grid-column: span 12;
+    background-image: linear-gradient(
+        0deg, rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        ),url(img/bg1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2/12;
+}
+footer{
+    background: rgb(0, 0, 0);
+    grid-column: span 12;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #fff;
+    padding: .5rem;
+}
+.header__page{
+    display: flex;
+    flex-direction: column;
+}
+.header__page-logo{
+    text-align: center;
+    padding: 1rem;
+}
+.header__page-logo h3{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 600;
+    color: #fff;
+}
+.header__page nav{
+    display: flex;
+}
+.header__page nav ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.header__page nav ul li{
+    display: inline-flex;
+}
+.header__page nav ul li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #fff;
+}
+.header__page nav ul li a:hover{
+    color: rgb(184, 121, 121);
+}
+.header__title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    margin: auto 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+}
+.header__title button{
+    align-self: center;
+    padding: .5rem;
+    font-size: 1.1rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    border: none;
+    color: #fff;
+    background: #000;
+}
+.header__title button:hover{
+    background: rgb(100, 100, 100);    
+}
+.cartas{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    padding-bottom: 1rem;
+    text-align: center;
+    box-shadow: -1px 0 5px #00000071;
+    background-color: #fff;
+    border-radius: 15%;
+}
+
+.card header img{
+    display: block;
+    width: 8rem;
+    margin: 0 auto;
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+}
+
+.card main p{
+    padding: .5rem;
+}
+.card main button{
+    align-self: center;
+    padding: .2rem;
+    border: none;
+    font-weight: 600;
+    background: transparent;
+    border-bottom: 1px solid #000;
+}
+.card main button:hover{
+    background: rgb(145, 221, 247);
+}
+main .gallery{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 1rem; 
+    column-gap: .5rem;
+    margin-bottom: 1rem;
+}
+main .gallery div{
+    overflow: hidden;
+}
+main .gallery img{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: -1px 5px 10px #00000071;
+    border-radius: .5rem;
+    transition-property: all;
+    transition-duration: .5s;
+}
+main .gallery img:hover{ 
+    scale: 1.2;
+}
+.footer__logo{
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-style: italic;
+    align-self: center;
+}
+footer nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+footer nav ul li{
+    display: inline-flex;
+    font-size: 1.2rem;
+}
+footer nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+footer nav ul li a:hover{
+    color: gray;
+}
+footer nav img{
+    width: 1.6rem;
+    margin: 0 .5rem;
+}
+.legal{
+    font-weight: 900;
+    align-self: center;
+}
+
+@media only screen and (min-width: 480px) and (max-width:770px){
+    .header__page-logo h3{
+        font-size: 2.5rem;
+    }
+    .header__page nav ul li{
+        font-size: 2rem;
+    }
+    main .gallery{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media only screen and (min-width:770px) and (max-width:1440px){
+    .header__page{
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 1rem;
+    }
+    .header__page-logo{
+        padding: 0;
+    }
+    .header__page nav ul li a{
+        margin-right: 1.5rem;
+    }
+    main .gallery{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
